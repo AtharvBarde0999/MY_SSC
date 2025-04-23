@@ -1,44 +1,26 @@
-const express = require('express');
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const cors = require('cors');
-
-// Route imports
-const authRoutes = require('./routes/auth');
-const noteRoutes = require('./routes/notes');
-const courseRoutes = require('./routes/courses');
-const quizRoutes = require('./routes/quiz'); // fixed 'requires' typo
-
-dotenv.config();
-
+const express = require('express');
 const app = express();
-app.use(cors());
-app.use(express.json());
 
-const PORT = process.env.PORT || 5013; // fallback port if .env is missing
+// MongoDB Atlas connection string
+const mongoURI = 'mongodb+srv://atharvbarde999:mayank1234@myssccluster2.svftcck.mongodb.net/?retryWrites=true&w=majority&appName=MYSSCcluster2';
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-}).then(() => {
-    console.log("✅ MongoDB Connected");
-}).catch((err) => {
-    console.error("❌ MongoDB Error:", err);
+// Connect to MongoDB
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log('✅ MongoDB Connected');
+    })
+    .catch((error) => {
+        console.error('❌ MongoDB Error:', error);
+    });
+
+// Basic route to confirm server is running
+app.get('/', (req, res) => {
+    res.send('MYSSC Backend Running 🚀');
 });
 
-// Route usage
-app.use('/api/auth', authRoutes);
-app.use('/api/notes', noteRoutes);
-app.use('/api/courses', courseRoutes);
-app.use('/api/quiz', quizRoutes);
-
-// Default route
-app.get("/", (req, res) => {
-    res.send("MYSSC Backend Running 🚀");
-});
-
-// Server listener
+// Define the port your server will listen on
+const PORT = process.env.PORT || 5013;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
 });
