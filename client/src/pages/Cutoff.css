@@ -1,0 +1,90 @@
+.cutoff-page {
+    padding: 3rem 2rem;
+    background: #f2f2f2;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.cutoff-page h1 {
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 2rem;
+}
+
+.cutoff-table-container {
+    background-color: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cutoff-table-container h2 {
+    color: #0f172a;
+    margin-bottom: 1rem;
+    border-left: 6px solid #3b82f6;
+    padding-left: 1rem;
+}
+
+.cutoff-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.cutoff-table thead {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.cutoff-table th,
+.cutoff-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 1rem;
+}
+
+.cutoff-table tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+.cutoff-table tr:hover {
+    background-color: #e0f2fe;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.cutoff-intro {
+    background-color: #f0f8ff;
+    border-left: 6px solid #0077cc;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+.cutoff-intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #004a99;
+}
+
+.cutoff-list {
+    list-style-type: disc;
+    padding-left: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.cutoff-list li {
+    margin-bottom: 0.75rem;
+}

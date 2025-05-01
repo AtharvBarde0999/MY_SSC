@@ -1,0 +1,407 @@
+/* client/src/pages/Playlists.css */
+.playlists-page {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+
+
+
+
+
+
+/* Hero Section with Perfect Centering */
+.playlists-hero {
+    display: grid;
+    place-items: center;
+    /* Perfect centering */
+    padding: 2rem;
+    min-height: 40vh;
+    /* Adjust height as needed */
+}
+
+.hero-container {
+    background: linear-gradient(135deg, #fffacd 0%, #fffff0 100%);
+    border-radius: 25px;
+    box-shadow: 0 8px 24px rgba(255, 199, 44, 0.15);
+    width: 90%;
+    max-width: 1200px;
+    border: 1px solid #ffe082;
+    overflow: hidden;
+}
+
+.hero-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 4rem 2rem;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: #4a5568;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-content-wrapper {
+        padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-container {
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-content-wrapper {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+
+
+
+
+
+/* Featured Playlists */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.section-header p {
+    color: #718096;
+    font-size: 1.1rem;
+}
+
+.playlists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.playlist-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.playlist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.playlist-thumbnail {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.playlist-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.playlist-card:hover .playlist-thumbnail img {
+    transform: scale(1.05);
+}
+
+.playlist-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.youtube-icon {
+    margin-right: 5px;
+}
+
+.playlist-content {
+    padding: 1.5rem;
+}
+
+.playlist-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+    color: #2c3e50;
+}
+
+.playlist-description {
+    color: #718096;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.playlist-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 1.5rem;
+    color: #4a5568;
+    font-size: 0.9rem;
+}
+
+.playlist-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.playlist-meta svg {
+    margin-right: 5px;
+    color: #3498db;
+}
+
+.playlist-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}
+
+.updated-date {
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+.playlist-button {
+    background: #ff0000;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.playlist-button:hover {
+    background: #cc0000;
+}
+
+
+
+
+.resources-section {
+    padding: 4rem 2rem;
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resource-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.resource-icon {
+    font-size: 2rem;
+    color: #ff7f50;
+    margin-bottom: 1rem;
+}
+
+.channel-buttons,
+.study-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.channel-btn,
+.study-btn {
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    background: linear-gradient(90deg, #00c6ff, #0072ff);
+    color: white;
+    font-weight: 600;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.study-btn {
+    background: linear-gradient(90deg, #ff8a00, #e52e71);
+}
+
+.channel-btn:hover,
+.study-btn:hover {
+    transform: scale(1.05);
+    background: #004d99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .playlists-hero h1 {
+        font-size: 2rem;
+    }
+
+    .playlists-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+}
+
+
+
+
+
+
+
+
+/* One-shot Video Styling */
+.playlist-card.is-one-shot {
+    border: 2px solid #ff7e5f;
+    position: relative;
+}
+
+.playlist-card.is-one-shot::before {
+    content: "ONE SHOT";
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff7e5f;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.playlist-card.is-one-shot .playlist-badge {
+    background: #ff7e5f;
+}
+
+.playlist-card.is-one-shot .playlist-button {
+    background: #ff7e5f;
+}
+
+.playlist-card.is-one-shot .playlist-button:hover {
+    background: #e5674f;
+}
+
+
+
+
+
+
+
+
+
+
+/* Special styling for science playlists */
+.playlist-card.science-card {
+    border-left: 5px solid #4CAF50;
+    /* Green accent for science */
+}
+
+.playlist-card.science-card .playlist-badge {
+    background: #4CAF50;
+}
+
+.playlist-card.science-card:hover {
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+.science-topics {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
+
+.science-topics li {
+    margin-bottom: 0.3rem;
+    position: relative;
+    padding-left: 1.2rem;
+}
+
+.science-topics li:before {
+    content: "•";
+    color: #4CAF50;
+    position: absolute;
+    left: 0;
+}

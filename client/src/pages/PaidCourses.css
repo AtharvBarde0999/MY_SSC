@@ -1,0 +1,123 @@
+.paid-courses-page {
+    background: linear-gradient(135deg, #ffe0e0, #e0f7fa, #fff4e6, #e0ffe0);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    padding: 2rem;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.paid-courses-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    animation: fadeSlideDown 1.2s ease;
+}
+
+.paid-courses-header h1 {
+    font-size: 3rem;
+    color: #0077b6;
+    margin-bottom: 1rem;
+}
+
+.paid-courses-header p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.paid-courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.paid-course-card {
+    background: #ffffffaa;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    animation: fadeUp 1.5s ease forwards;
+    opacity: 0;
+}
+
+.paid-course-card:hover {
+    transform: scale(1.05) rotate(1deg);
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+}
+
+.paid-course-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.paid-course-card h2 {
+    font-size: 1.6rem;
+    margin: 0.5rem 0;
+    color: #0097a7;
+}
+
+.paid-course-card p {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+.buy-now-button {
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    border: none;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.buy-now-button:hover {
+    background: linear-gradient(45deg, #f06595, #ff6b6b);
+}
+
+/* Animations */
+@keyframes fadeSlideDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}

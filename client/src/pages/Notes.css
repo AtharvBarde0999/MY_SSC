@@ -1,0 +1,205 @@
+/* src/pages/Notes.css */
+
+.notes-page {
+    padding: 2rem;
+    background: linear-gradient(135deg, #f0f8ff, #e6f7ff);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    animation: fadeInPage 1s ease-in forwards;
+    min-height: 100vh;
+}
+
+.notes-header {
+    background: #c1f0f6;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: slideDownHeader 1s ease forwards;
+}
+
+.notes-header h1 {
+    font-size: 2.8rem;
+    color: #007acc;
+    animation: glowText 2s ease-in-out infinite alternate;
+}
+
+.study-tips {
+    background: #fff4e6;
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    animation: fadeInSection 1.5s ease-in forwards;
+}
+
+.study-tips h2 {
+    font-size: 1.9rem;
+    color: #ff8c00;
+}
+
+.study-tips ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.study-tips li {
+    margin-bottom: 0.8rem;
+    font-size: 1.15rem;
+}
+
+.notes-section {
+    margin-top: 2rem;
+    animation: fadeInSection 2s ease-in forwards;
+}
+
+.notes-section h2 {
+    margin-top: 2rem;
+    font-size: 1.7rem;
+    color: #00a86b;
+    animation: slideUp 1.5s ease forwards;
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1rem;
+}
+
+.notes-grid a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background: #f0fff0;
+    color: #007700;
+    padding: 1.2rem;
+    border-radius: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease, transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.notes-grid a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 255, 0, 0.1);
+    z-index: 0;
+    transition: height 0.3s ease;
+}
+
+.notes-grid a:hover::after {
+    height: 100%;
+}
+
+.notes-grid a:hover {
+    background: #d1ffd1;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 128, 0, 0.3);
+}
+
+.notes-grid a>* {
+    position: relative;
+    z-index: 1;
+}
+
+/* Buttons section */
+.about-buttons {
+    margin-top: 4rem;
+    animation: fadeInSection 2.5s ease-in forwards;
+}
+
+.about-buttons h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    color: #007acc;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.button-group button {
+    background-color: #00a86b;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-weight: 600;
+}
+
+.button-group button:hover {
+    background-color: #00804b;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDownHeader {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSection {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes glowText {
+    from {
+        text-shadow: 0 0 5px #00cfff;
+    }
+
+    to {
+        text-shadow: 0 0 20px #00cfff;
+    }
+}
