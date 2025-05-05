@@ -64,6 +64,8 @@ import Cutoff from "./pages/Cutoff";
 import AboutSSC from "./pages/AboutSSC";
 import PaidCourses from "./pages/PaidCourses";
 
+import CommunityPage from './pages/communityPage';
+
 
 
 // Protected Route Component
@@ -97,6 +99,10 @@ function App() {
           <Route path="/current-affairs" element={<CurrentAffairs />} />
 
           <Route path="/paidcourses" element={<PaidCourses />} />
+          <Route path="/community" element={<CommunityPage />} />
+
+
+
 
 
 
